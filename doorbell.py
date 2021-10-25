@@ -3,7 +3,6 @@ import sys
 from playsound import playsound
 from cv2 import cv2
 
-#cascPath = sys.argv[1]
 cascPath = "/usr/local/lib/python3.9/dist-packages/cv2/data/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 
@@ -14,7 +13,6 @@ while(True):
     ret ,frame = vid.read()
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    #flags=cv2.cv.CV_HAAR_SCALE_IMAGE)
     faces = faceCascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5,minSize=(30,30)) 
 
     for (x, y, w, h) in faces:
