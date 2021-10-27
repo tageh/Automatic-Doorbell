@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import sys
 from playsound import playsound
 from cv2 import cv2
 
@@ -17,7 +16,7 @@ while(True):
 
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-        playsound("Doorbell-SoundBible.com-516741062.mp3")
+        #playsound("Doorbell-SoundBible.com-516741062.mp3")
 
     cv2.imshow("frame", frame)
 
