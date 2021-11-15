@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-from playsound import playsound
 from cv2 import cv2
 
-cascPath = "/usr/local/lib/python3.9/dist-packages/cv2/data/haarcascade_frontalface_default.xml"
+
+cascPath = "/home/tage/Documents/Projects/Automatic-Doorbell/local/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 
 vid = cv2.VideoCapture(-1)
@@ -16,7 +16,6 @@ while(True):
 
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-        #playsound("Doorbell-SoundBible.com-516741062.mp3")
 
     cv2.imshow("frame", frame)
 
