@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from cv2 import cv2
+#from playsound import playsound
 
 
 cascPath = "/home/tage/Documents/Projects/Automatic-Doorbell/local/haarcascade_frontalface_default.xml"
@@ -18,7 +19,8 @@ while(True):
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
     cv2.imshow("frame", frame)
-
+    #playsound('/Documents/Projects/Automatic-Doorbell/local/lyd.mp3')
+    
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
